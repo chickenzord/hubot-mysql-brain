@@ -1,0 +1,27 @@
+{
+  "name": "hubot-mysql-brain",
+  "version": "0.0.1",
+  "description": "A hubot script to persist hubot's brain using MySQL",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/akhyrul/hubot-mysql-brain.git"
+  },
+  "keywords": [
+    "hubot",
+    "mysql",
+    "hubot-brain"
+  ],
+  "author": "Akhyar Amarullah <akhyrul@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akhyrul/hubot-mysql-brain/issues"
+  },
+  "homepage": "https://github.com/akhyrul/hubot-mysql-brain#readme",
+  "dependencies": {
+    "mysql": "^2.8.0"
+  }
+}
