@@ -1,6 +1,6 @@
 {
   "name": "hubot-mysql-brain",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A hubot script to persist hubot's brain using MySQL",
   "main": "index.coffee",
   "scripts": {
