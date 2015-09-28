@@ -22,12 +22,14 @@ module.exports = (robot) ->
 
   load_data = () ->
     conn.query "SELECT `data` FROM `#{table}` WHERE `id`= 0", (err, rows) ->
-      throw err if err or rows.length == 0
-      robot.brain.mergeData rows[0].data
+      if err or rows.length == 0
+        robot.brain.mergeData {}
+      else
+        robot.brain.mergeData rows[0].data
 
   conn.connect (err) ->
     if err?
-      robot.logger.error err
+      robot.logger.info "#{tag}: Error\n#{err}"
     else
       robot.logger.info "#{tag}: Connected to MySQL brain (table: #{table})"
       load_data()
@@ -35,4 +37,4 @@ module.exports = (robot) ->
   robot.brain.on 'save', (data = {}) ->
     vals = { 'id': 0, 'data': JSON.stringify(data) }
     conn.query "INSERT INTO `#{table}` SET ? ON DUPLICATE KEY UPDATE `data` = `data`", vals, (err, result) ->
-      throw err if err?
+      return
