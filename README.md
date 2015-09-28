@@ -1,33 +1,34 @@
 # hubot-mysql-brain
- A hubot script to persist hubot's brain using MySQL
 
- See [`scripts/mysql-brain.coffee`](scripts/movie.coffee) for full documentation.
+A hubot script to persist hubot's brain using MySQL
 
- ## Installation
+See [`scripts/mysql-brain.coffee`](scripts/mysql-brain.coffee) for full documentation.
 
- 1. In hubot project repo, run:
+## Installation
 
- ```
- npm install hubot-mysql-brain --save
- ```
+1. In hubot project repo, run:
 
- 2. Then add **hubot-mysql-brain** to your `external-scripts.json`:
+    ```
+    npm install hubot-mysql-brain --save
+    ```
 
-   ```json
-   [
-     "hubot-mysql-brain"
-   ]
-   ```
+2. Then add **hubot-mysql-brain** to your `external-scripts.json`:
 
- 3. Create your database schema
+    ```json
+    [
+      "hubot-mysql-brain"
+    ]
+    ```
+    
+3. Create your database schema:
 
-   ```
-   CREATE TABLE `brain` (
-     `id` INT,
-     `data` TEXT,
-     PRIMARY KEY (`id`)
-     )
-   ```
+    ```sql
+    CREATE TABLE `brain` (
+      `id` INT,
+      `data` TEXT,
+      PRIMARY KEY (`id`)
+      )
+    ```
 
 ## Configurations
 
